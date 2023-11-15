@@ -1,0 +1,330 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainImage {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    display: none;
+}
+
+body {
+    background-color: orange;
+
+
+}
+
+.video {
+    width: 100vw;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    transform: translateY(1vh);
+}
+
+body {
+
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: orange;
+}
+
+/* Header*/
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .action {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 220px;
+    background-color: black;
+    color: white;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0px;
+    display: none;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: orange;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 2rem;
+    transform: translateY(30vh);
+}
+
+.grid-container {
+    transform: translateY(450px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+    font-family: "Segoe UI";
+}
+
+.grid-container h5 {
+    margin-top: 10px;
+    color: white;
+}
+
+article {
+    width: 25vw;
+}
+
+article img {
+    width: 25vw;
+
+}
+
+.svgAnimation {
+    transform: none;
+    transition: transform 5s ease;
+}
+
+.svgAnimation:hover {
+    animation: animation1 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animation1 {
+    50% {
+        rotate: 180deg;
+    }
+
+}
+
+.article1:hover {
+    animation: rotate 3s
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+
+    }
+}
+
+.article2:hover {
+    animation: blur 3s
+
+}
+
+@keyframes blur {
+    50% {
+        filter: blur(10px);
+    }
+}
+
+.packages h5 {
+    margin-top: 5px;
+}
+
+.article3:hover {
+    animation: scale 2.5s
+
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.dropdown-content h6 {
+    color: white;
+    padding-top: 10px;
+}
+
+.dropdown-content h6:hover {
+    color: orange;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.footer1 {
+    transform: translateY(500px);
+    position: relative;
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 14vh;
+    justify-content: space-between;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 560px) {
+    video {
+        display: none;
+    }
+
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .action {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .logo .logo1 {
+        width: 50px;
+    }
+
+    .mainImage {
+        display: block;
+        height: 50vh;
+    }
+
+    .welcome {
+        font-size: 1.5rem;
+        transform: translateY(-25vh);
+        color: white;
+    }
+
+    header {
+        height: 0px;
+    }
+
+    .grid-container {
+        transform: translateY(20px);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 5vw;
+        margin-right: 5vw;
+        text-align: center;
+        font-family: "Segoe UI";
+    }
+
+    .grid-container h5 {
+        margin-top: 10px;
+        color: white;
+    }
+
+    article {
+        width: 80vw;
+        margin-bottom: 5vh;
+    }
+
+    article img {
+        width: 80vw;
+
+    }
+
+    .footer1 {
+        transform: translateY(5px);
+        position: relative;
+        display: flex;
+        background-color: black;
+        color: white;
+        height: 13vh;
+        justify-content: space-between;
+        padding-right: 5vw;
+        padding-left: 5vw;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .footer1 h3 {
+        font-size: small;
+        font-weight: lighter;
+    }
+}
+
